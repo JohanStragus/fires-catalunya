@@ -27,6 +27,19 @@
     @for (fair of filteredFairs; track fair.activityId) {
     <li>
         <strong>{{ fair.activityName }}</strong> - {{ fair.municipalityName }}
+
+        <!-- Botón para añadir o quitar de favoritos -->
+        <button (click)="toggleFavorite(fair)">
+            <!-- Si la feria está en favoritos -->
+            @if (isFavorite(fair)) {
+                <!-- Botón para quitar de favoritos -->
+                Quitar de favoritos
+            <!-- Si la feria no está en favoritos -->
+            } @else {
+                <!-- Botón para añadir a favoritos -->
+                Añadir a favoritos
+            }
+        </button>
     </li>
     }
 </ul>

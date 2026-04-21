@@ -6,19 +6,29 @@ ul {
 /* Elementos de la lista */
 li {
     cursor: pointer;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     transition: 0.2s;
 }
 
-/* Hover */
+/* Hover sobre elementos */
 li:hover {
     color: #c62828;
 }
 
-/* Seleccionado */
-.selected {
-    font-weight: bold;
-    color: #c62828;
+/* Botón de favoritos */
+button {
+    margin-left: 10px;
+    padding: 4px 8px;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Hover del botón */
+button:hover {
+    background-color: #c62828;
+    color: white;
 }
 
 /* Separadores */
