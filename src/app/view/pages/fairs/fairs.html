@@ -1,1 +1,9 @@
-<p>fairs works!</p>
+<h2>Comarques</h2>
+
+<ul>
+    <!-- mostramos las regiones únicas en una lista -->
+    @for (region of regions; track region) {
+        <!-- cada región se muestra como un elemento de la lista -->
+        <li>{{ region }}</li>
+    }
+</ul>
