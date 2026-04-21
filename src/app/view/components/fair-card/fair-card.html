@@ -1,1 +1,20 @@
-<p>fair-card works!</p>
+<div class="card">
+    <!-- Nombre y municipio de la feria -->
+    <p>
+        <strong>{{ fair.activityName }}</strong> - {{ fair.municipalityName }}
+    </p>
+
+    <!-- Botón para añadir o quitar de favoritos -->
+    <button (click)="favoriteClicked.emit()">
+        <!-- Si la feria está en favoritos -->
+        @if (isFavorite) {
+        <!-- Quitar de favoritos -->
+        Quitar de favoritos
+        } 
+        <!-- Si la feria no está en favoritos -->
+        @else {
+        <!-- Añadir a favoritos -->
+        Añadir a favoritos
+        }
+    </button>
+</div>

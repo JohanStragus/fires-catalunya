@@ -7,17 +7,12 @@
 
 <!-- Si hay favoritos, muestra la lista -->
 @if (favoriteFairs.length > 0) {
-<ul>
     <!-- Lista de ferias favoritas -->
     @for (fair of favoriteFairs; track fair.activityId) {
-    <li>
-        <strong>{{ fair.activityName }}</strong> - {{ fair.municipalityName }}
-
-        <!-- Botón para eliminar de favoritos -->
-        <button (click)="removeFavorite(fair)">
-            Eliminar
-        </button>
-    </li>
+    <app-fair-card
+        [fair]="fair"
+        [isFavorite]="true"
+        (favoriteClicked)="removeFavorite(fair)">
+    </app-fair-card>
     }
-</ul>
 }

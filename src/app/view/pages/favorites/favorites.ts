@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { FairCard } from '../../components/fair-card/fair-card';
 
 @Component({
   selector: 'app-favorites',
-  imports: [],
+  imports: [FairCard],
   templateUrl: './favorites.html',
   styleUrl: './favorites.css',
 })

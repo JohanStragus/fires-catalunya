@@ -22,24 +22,11 @@
 
 <h2>Llistat de fires</h2>
 
-<ul>
-    <!-- Opciones de ferias filtradas -->
-    @for (fair of filteredFairs; track fair.activityId) {
-    <li>
-        <strong>{{ fair.activityName }}</strong> - {{ fair.municipalityName }}
-
-        <!-- Botón para añadir o quitar de favoritos -->
-        <button (click)="toggleFavorite(fair)">
-            <!-- Si la feria está en favoritos -->
-            @if (isFavorite(fair)) {
-                <!-- Botón para quitar de favoritos -->
-                Quitar de favoritos
-            <!-- Si la feria no está en favoritos -->
-            } @else {
-                <!-- Botón para añadir a favoritos -->
-                Añadir a favoritos
-            }
-        </button>
-    </li>
-    }
-</ul>
+<!-- Lista de tarjetas de ferias -->
+@for (fair of filteredFairs; track fair.activityId) {
+<app-fair-card
+    [fair]="fair"
+    [isFavorite]="isFavorite(fair)"
+    (favoriteClicked)="toggleFavorite(fair)">
+</app-fair-card>
+}

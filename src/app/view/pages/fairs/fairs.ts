@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { fairs } from '../../../model/fairs';
+import { FairCard } from '../../components/fair-card/fair-card';
 
 @Component({
   selector: 'app-fairs',
-  imports: [],
+  imports: [FairCard],
   templateUrl: './fairs.html',
   styleUrl: './fairs.css',
 })
