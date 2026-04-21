@@ -1,0 +1,32 @@
+/* Listas */
+ul {
+    padding-left: 20px;
+}
+
+/* Elementos de la lista */
+li {
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: 0.2s;
+}
+
+/* Hover */
+li:hover {
+    color: #c62828;
+}
+
+/* Seleccionado */
+.selected {
+    font-weight: bold;
+    color: #c62828;
+}
+
+/* Separadores */
+hr {
+    margin: 20px 0;
+}
+
+/* Títulos */
+h2 {
+    margin-top: 20px;
+}

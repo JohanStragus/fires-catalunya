@@ -1,9 +1,32 @@
-<h2>Comarques</h2>
+<h2>Selecciona una comarca</h2>
+
+<!-- El selector de comarcas -->
+<select #selector (change)="selectRegion(selector.value)">
+    <option value="">-- Selecciona --</option>
+
+    <!-- Opciones de comarcas -->
+    @for (region of regions; track region) {
+    <option [value]="region">
+        {{ region }}
+    </option>
+    }
+</select>
+
+<!-- Si no se ha seleccionado una comarca, muestra un mensaje -->
+@if (!selectedRegion) {
+<p>Selecciona una comarca</p>
+}
+
+<!-- Separador -->
+<hr>
+
+<h2>Llistat de fires</h2>
 
 <ul>
-    <!-- mostramos las regiones únicas en una lista -->
-    @for (region of regions; track region) {
-        <!-- cada región se muestra como un elemento de la lista -->
-        <li>{{ region }}</li>
+    <!-- Opciones de ferias filtradas -->
+    @for (fair of filteredFairs; track fair.activityId) {
+    <li>
+        <strong>{{ fair.activityName }}</strong> - {{ fair.municipalityName }}
+    </li>
     }
 </ul>
