@@ -15,7 +15,7 @@ li:hover {
     color: #c62828;
 }
 
-/* Botón de favoritos */
+/* Botones */
 button {
     margin-left: 10px;
     padding: 4px 8px;
@@ -39,4 +39,29 @@ hr {
 /* Títulos */
 h2 {
     margin-top: 20px;
+}
+
+/* Estructura general de la página */
+.fairs-page {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Contenido principal */
+.fairs-content {
+    flex: 1;
+}
+
+/* Zona superior con selector y botón */
+.top-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 12px 0;
+}
+
+/* Selector */
+select {
+    padding: 8px;
 }

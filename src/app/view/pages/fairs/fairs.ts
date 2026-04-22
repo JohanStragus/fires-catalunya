@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { fairs } from '../../../model/fairs';
 import { FairCard } from '../../components/fair-card/fair-card';
+import { FavoritesPanel } from '../../components/favorites-panel/favorites-panel';
 
 @Component({
   selector: 'app-fairs',
-  imports: [FairCard],
+  imports: [FairCard, FavoritesPanel],
   templateUrl: './fairs.html',
   styleUrl: './fairs.css',
 })
@@ -20,6 +21,9 @@ export class Fairs {
 
   // Lista de ferias filtradas según la comarca seleccionada
   filteredFairs: any[] = [];
+
+  // Controla si el panel lateral está visible
+  showFavoritesPanel: boolean = false;
 
   ///////////////////////////// MÉTODOS /////////////////////////////
 
@@ -79,8 +83,8 @@ export class Fairs {
         // Si los id son diferntes, se quita de favoritos
         (f: any) => f.activityId !== fair.activityId
       );
-    } 
-    
+    }
+
     // Si la feria no está en favoritos
     else {
       // añadir a favoritos
@@ -89,5 +93,10 @@ export class Fairs {
 
     // Guardar la lista actualizada de favoritos en LocalStorage
     localStorage.setItem('favorites', JSON.stringify(favorites));
+  }
+
+  // 5. Mostrar u ocultar el panel lateral de favoritos
+  toggleFavoritesPanel() {
+    this.showFavoritesPanel = !this.showFavoritesPanel;
   }
 }

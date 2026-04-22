@@ -1,0 +1,68 @@
+/* Panel lateral completo */
+:host {
+    display: block;
+    width: 320px;
+    min-width: 320px;
+    height: calc(100vh - 100px);
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-left: 2px solid #dcdcdc;
+    overflow-y: auto;
+    box-sizing: border-box;
+    position: sticky;
+    top: 20px;
+}
+
+/* Título */
+h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #c62828;
+    font-size: 28px;
+}
+
+/* Lista */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Cada favorito */
+li {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Nombre de la feria */
+li strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+/* Municipio */
+span {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Botón */
+button {
+    margin-left: 0;
+    margin-top: 8px;
+    padding: 6px 10px;
+    border: none;
+    background-color: #eeeeee;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* Hover */
+button:hover {
+    background-color: #c62828;
+    color: white;
+}

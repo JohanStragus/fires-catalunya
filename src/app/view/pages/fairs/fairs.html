@@ -1,32 +1,65 @@
-<h2>Selecciona una comarca</h2>
+<div class="fairs-page">
 
-<!-- El selector de comarcas -->
-<select #selector (change)="selectRegion(selector.value)">
-    <option value="">-- Selecciona --</option>
+    <!-- Contenido principal -->
+    <div class="fairs-content">
 
-    <!-- Opciones de comarcas -->
-    @for (region of regions; track region) {
-    <option [value]="region">
-        {{ region }}
-    </option>
+        <h2>Selecciona una comarca</h2>
+
+        <!-- Zona del selector y botón de favoritos -->
+        <div class="top-controls">
+
+            <!-- El selector de comarcas -->
+            <select #selector (change)="selectRegion(selector.value)">
+                <option value="">-- Selecciona --</option>
+
+                <!-- Opciones de comarcas -->
+                @for (region of regions; track region) {
+                <option [value]="region">
+                    {{ region }}
+                </option>
+                }
+            </select>
+
+            <!-- Botón para mostrar u ocultar el panel de favoritos -->
+            <button (click)="toggleFavoritesPanel()">
+                <!-- Si el panel de favoritos está visible-->
+                @if (showFavoritesPanel) {
+                <!-- Botón para ocultar el panel de favoritos -->
+                Amagar favorits
+                } 
+                <!-- Si el panel de favoritos no está visible -->
+                @else {
+                <!-- Botón para mostrar el panel de favoritos -->
+                Mostrar favorits
+                }
+            </button>
+
+        </div>
+
+        <!-- Si no se ha seleccionado una comarca, muestra un mensaje -->
+        @if (!selectedRegion) {
+        <p>Selecciona una comarca</p>
+        }
+
+        <!-- Separador -->
+        <hr>
+
+        <h2>Llistat de fires</h2>
+
+        <!-- Lista de tarjetas de ferias -->
+        @for (fair of filteredFairs; track fair.activityId) {
+        <app-fair-card
+            [fair]="fair"
+            [isFavorite]="isFavorite(fair)"
+            (favoriteClicked)="toggleFavorite(fair)">
+        </app-fair-card>
+        }
+
+    </div>
+
+    <!-- Panel lateral de favoritos -->
+    @if (showFavoritesPanel) {
+    <app-favorites-panel></app-favorites-panel>
     }
-</select>
 
-<!-- Si no se ha seleccionado una comarca, muestra un mensaje -->
-@if (!selectedRegion) {
-<p>Selecciona una comarca</p>
-}
-
-<!-- Separador -->
-<hr>
-
-<h2>Llistat de fires</h2>
-
-<!-- Lista de tarjetas de ferias -->
-@for (fair of filteredFairs; track fair.activityId) {
-<app-fair-card
-    [fair]="fair"
-    [isFavorite]="isFavorite(fair)"
-    (favoriteClicked)="toggleFavorite(fair)">
-</app-fair-card>
-}
+</div>

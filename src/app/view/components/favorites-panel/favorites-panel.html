@@ -1,0 +1,26 @@
+<h3>Favorits</h3>
+
+<!-- Si no hay favoritos -->
+@if (favoriteFairs.length === 0) {
+<p>No hi ha favorits.</p>
+}
+
+<!-- Si hay favoritos -->
+@if (favoriteFairs.length > 0) {
+<ul>
+    <!-- Recorremos la lista de favoritos -->
+    @for (fair of favoriteFairs; track fair.activityId) {
+    <li>
+        <!-- Mostramos la información de la feria favorita -->
+        <strong>{{ fair.activityName }}</strong>
+        <br>
+        <span>{{ fair.municipalityName }}</span>
+
+        <!-- Botón para eliminar de favoritos -->
+        <button (click)="removeFavorite(fair)">
+            Eliminar
+        </button>
+    </li>
+    }
+</ul>
+}
