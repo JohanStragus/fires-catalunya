@@ -1,0 +1,20 @@
+<!-- Si existe la feria -->
+@if (fair) {
+<div class="detail-container">
+    <h2>{{ fair.activityName }}</h2>
+
+    <!-- Mostramos la información detallada -->
+    <p><strong>Municipi:</strong> {{ fair.municipalityName }}</p>
+    <p><strong>Comarca:</strong> {{ fair.regionName }}</p>
+    <p><strong>Data:</strong> {{ fair.date }}</p>
+    <p><strong>Lloc:</strong> {{ fair.location }}</p>
+    <p><strong>Sector:</strong> {{ fair.sectorName }}</p>
+    <p><strong>Organitzador:</strong> {{ fair.organizerName }}</p>
+    <p><strong>Productes:</strong> {{ fair.products }}</p>
+    <p><strong>Web:</strong> {{ fair.web }}</p>
+</div>
+} 
+<!-- Si no existe la feria -->
+@else {
+<p>No s'ha trobat la fira.</p>
+}

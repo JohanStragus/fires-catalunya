@@ -16,19 +16,19 @@
         <button (click)="favoriteClicked.emit()">
             <!-- En el caos de que este en favoritos -->
             @if (isFavorite) {
-                <!-- que pueda quitar de favoritos -->
-                Quitar de favoritos
-            } 
+            <!-- que pueda quitar de favoritos -->
+            Quitar de favoritos
+            }
             <!-- En el caso de que no esté en favoritos -->
             @else {
-                <!-- que pueda agregar a favoritos -->
-                Afegir a favorits
+            <!-- que pueda agregar a favoritos -->
+            Afegir a favorits
             }
         </button>
 
         <!-- Botón para ver detalles -->
-        <button class="details-button">
+        <a class="details-button" [routerLink]="['/fair', fair.activityId]">
             Veure detalls
-        </button>
+        </a>
     </div>
 </div>

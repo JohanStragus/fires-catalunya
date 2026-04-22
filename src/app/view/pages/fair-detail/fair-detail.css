@@ -1,0 +1,31 @@
+/* Contenedor principal */
+.detail-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Título */
+h2 {
+    margin-bottom: 20px;
+    color: #c62828;
+    font-size: 28px;
+}
+
+/* Bloques de info */
+.info {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+/* Etiquetas */
+.info strong {
+    color: #333;
+}
+
+/* Separador */
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}

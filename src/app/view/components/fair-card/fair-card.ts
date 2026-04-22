@@ -1,8 +1,9 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-fair-card',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './fair-card.html',
   styleUrl: './fair-card.css',
 })
