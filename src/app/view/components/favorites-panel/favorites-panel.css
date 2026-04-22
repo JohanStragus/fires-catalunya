@@ -3,14 +3,11 @@
     display: block;
     width: 320px;
     min-width: 320px;
-    height: calc(100vh - 100px);
     padding: 20px;
     background-color: #f8f8f8;
     border-left: 2px solid #dcdcdc;
-    overflow-y: auto;
     box-sizing: border-box;
-    position: sticky;
-    top: 20px;
+    align-self: stretch;
 }
 
 /* Título */
@@ -19,6 +16,12 @@ h3 {
     margin-bottom: 20px;
     color: #c62828;
     font-size: 28px;
+}
+
+/* Texto vacío */
+p {
+    color: #666;
+    margin: 0;
 }
 
 /* Lista */
