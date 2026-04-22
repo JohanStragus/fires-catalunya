@@ -1,5 +1,9 @@
-<nav>
-  <a routerLink="/">Home</a>
-  <a routerLink="/fairs">Fires</a>
-  <a routerLink="/favorites">Favorits</a>
-</nav>
+<header class="header">
+  <h1>Fires de Catalunya</h1>
+
+  <nav>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a routerLink="/fairs" routerLinkActive="active">Fires</a>
+    <a routerLink="/favorites" routerLinkActive="active">Favorits</a>
+  </nav>
+</header>

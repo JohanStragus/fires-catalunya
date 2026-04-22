@@ -1,20 +1,34 @@
 <div class="card">
-    <!-- Nombre y municipio de la feria -->
-    <p>
-        <strong>{{ fair.activityName }}</strong> - {{ fair.municipalityName }}
-    </p>
+    <!-- Contenido principal de la tarjeta -->
+    <div class="card-body">
+        <h3>{{ fair.activityName }}</h3>
 
-    <!-- Botón para añadir o quitar de favoritos -->
-    <button (click)="favoriteClicked.emit()">
-        <!-- Si la feria está en favoritos -->
-        @if (isFavorite) {
-        <!-- Quitar de favoritos -->
-        Quitar de favoritos
-        } 
-        <!-- Si la feria no está en favoritos -->
-        @else {
-        <!-- Añadir a favoritos -->
-        Añadir a favoritos
-        }
-    </button>
+        <!-- Información adicional dentro de la tarjeta -->
+        <p><strong>Municipi:</strong> {{ fair.municipalityName }}</p>
+        <p><strong>Comarca:</strong> {{ fair.regionName }}</p>
+        <p><strong>Data:</strong> {{ fair.date }}</p>
+        <p><strong>Lloc:</strong> {{ fair.location }}</p>
+    </div>
+
+    <!-- Acciones de la tarjeta -->
+    <div class="card-actions">
+        <!-- Botón para agregar o quitar de favoritos -->
+        <button (click)="favoriteClicked.emit()">
+            <!-- En el caos de que este en favoritos -->
+            @if (isFavorite) {
+                <!-- que pueda quitar de favoritos -->
+                Quitar de favoritos
+            } 
+            <!-- En el caso de que no esté en favoritos -->
+            @else {
+                <!-- que pueda agregar a favoritos -->
+                Afegir a favorits
+            }
+        </button>
+
+        <!-- Botón para ver detalles -->
+        <button class="details-button">
+            Veure detalls
+        </button>
+    </div>
 </div>

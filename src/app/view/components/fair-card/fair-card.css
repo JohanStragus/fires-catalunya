@@ -1,23 +1,53 @@
 /* Tarjeta */
 .card {
-    padding: 12px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    background-color: #f9f9f9;
+    border: 2px solid #1e88e5;
+    border-radius: 10px;
+    background-color: white;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* Botón */
+/* Contenido */
+.card-body h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #c62828;
+}
+
+.card-body p {
+    margin: 6px 0;
+}
+
+/* Zona de botones */
+.card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+/* Botones */
 button {
-    margin-top: 8px;
-    padding: 4px 8px;
+    padding: 8px 12px;
     border: none;
-    background-color: #eee;
+    border-radius: 6px;
+    background-color: #eeeeee;
     cursor: pointer;
+    transition: 0.2s;
 }
 
-/* Hover del botón */
+/* Hover de botones */
 button:hover {
     background-color: #c62828;
     color: white;
+}
+
+/* Botón de detalles */
+.details-button {
+    background-color: #43a047;
+    color: white;
+}
+
+.details-button:hover {
+    background-color: #2e7d32;
 }
