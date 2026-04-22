@@ -65,3 +65,11 @@ h2 {
 select {
     padding: 8px;
 }
+
+/* Ajuste para igualar botón y selector */
+.top-controls select,
+.top-controls button {
+    padding: 8px 12px;
+    height: 36px;
+    box-sizing: border-box;
+}
