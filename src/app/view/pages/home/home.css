@@ -1,11 +1,13 @@
 /* Contenedor principal */
 .home-container {
-    min-height: calc(100vh - 90px);
+    height: calc(100vh - 80px);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    box-sizing: border-box;
     background: linear-gradient(to right, #fff5f5, #ffffff);
+    overflow: hidden;
 }
 
 /* Caja principal */
