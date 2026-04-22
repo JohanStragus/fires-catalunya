@@ -1,31 +1,79 @@
 /* Contenedor principal */
 .detail-container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
+    max-width: 720px;
+    margin: 50px auto;
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
 }
 
 /* Título */
-h2 {
-    margin-bottom: 20px;
+.detail-container h2 {
+    margin: 0 0 24px;
     color: #c62828;
-    font-size: 28px;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
 }
 
-/* Bloques de info */
-.info {
-    margin-bottom: 12px;
-    font-size: 16px;
+/* Líneas de información */
+.detail-container p {
+    margin: 0;
+    padding: 14px 0;
+    font-size: 1rem;
+    color: #222;
+    line-height: 1.6;
+    border-bottom: 1px solid #f1f1f1;
+    text-align: left;
+}
+
+/* Quitar línea del último */
+.detail-container p:last-child {
+    border-bottom: none;
 }
 
 /* Etiquetas */
-.info strong {
-    color: #333;
+.detail-container strong {
+    color: #c62828;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 120px;
+    margin-right: 10px;
 }
 
-/* Separador */
-hr {
-    margin: 20px 0;
-    border: none;
-    border-top: 1px solid #ddd;
+/* Enlace web */
+.detail-container a {
+    color: #c62828;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.detail-container a:hover {
+    text-decoration: underline;
+}
+
+/* Mensaje cuando no existe la feria */
+.not-found {
+    text-align: center;
+    color: #666;
+    margin-top: 40px;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .detail-container {
+        margin: 30px 16px;
+        padding: 24px;
+    }
+
+    .detail-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .detail-container strong {
+        min-width: 95px;
+    }
 }
