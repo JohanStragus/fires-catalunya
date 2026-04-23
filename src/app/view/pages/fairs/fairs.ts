@@ -99,4 +99,21 @@ export class Fairs {
   toggleFavoritesPanel() {
     this.showFavoritesPanel = !this.showFavoritesPanel;
   }
+
+  // 6. Obtener el número de favoritos
+  getFavoritesCount() {
+    // Obtener los datos de favoritos del LocalStorage
+    const data = localStorage.getItem('favorites');
+
+    // si hay datos
+    if (data) {
+      // parsear y devolver la longitud del array de favoritos
+      return JSON.parse(data).length;
+    } 
+    // si no hay datos
+    else {
+      // devolver 0
+      return 0;
+    }
+  }
 }

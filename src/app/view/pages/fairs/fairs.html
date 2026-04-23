@@ -22,16 +22,21 @@
 
             <!-- Botón para mostrar u ocultar el panel de favoritos -->
             <button (click)="toggleFavoritesPanel()">
-                <!-- Si el panel de favoritos está visible-->
+                <!-- Si está visible -->
                 @if (showFavoritesPanel) {
-                <!-- Botón para ocultar el panel de favoritos -->
+                <!-- Mostrar botón para ocultar favoritos -->
                 Amagar favorits
                 } 
-                <!-- Si el panel de favoritos no está visible -->
+                <!-- Sí no está visible -->
                 @else {
-                <!-- Botón para mostrar el panel de favoritos -->
+                <!-- Mostrar botón para mostrar favoritos -->
                 Mostrar favorits
                 }
+
+                <!-- Contador -->
+                <span class="badge">
+                    {{ getFavoritesCount() }}
+                </span>
             </button>
 
         </div>
@@ -48,10 +53,7 @@
 
         <!-- Lista de tarjetas de ferias -->
         @for (fair of filteredFairs; track fair.activityId) {
-        <app-fair-card
-            [fair]="fair"
-            [isFavorite]="isFavorite(fair)"
-            (favoriteClicked)="toggleFavorite(fair)">
+        <app-fair-card [fair]="fair" [isFavorite]="isFavorite(fair)" (favoriteClicked)="toggleFavorite(fair)">
         </app-fair-card>
         }
 

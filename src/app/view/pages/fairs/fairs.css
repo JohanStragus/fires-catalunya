@@ -15,22 +15,6 @@ li:hover {
     color: #c62828;
 }
 
-/* Botones */
-button {
-    margin-left: 10px;
-    padding: 4px 8px;
-    border: none;
-    background-color: #eee;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-/* Hover del botón */
-button:hover {
-    background-color: #c62828;
-    color: white;
-}
-
 /* Separadores */
 hr {
     margin: 20px 0;
@@ -74,4 +58,31 @@ h2 {
 /* Selector */
 select {
     padding: 8px;
+}
+
+/* Botón principal */
+.fairs-content button {
+    position: relative;
+    border: none;
+    border-radius: 6px;
+    background-color: #c62828;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Hover del botón */
+.fairs-content button:hover {
+    background-color: #a61e1e;
+}
+
+/* Badge */
+.badge {
+    margin-left: 8px;
+    background-color: white;
+    color: #c62828;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
 }
