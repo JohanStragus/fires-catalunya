@@ -1,26 +1,36 @@
-<h3>Favorits</h3>
-
-<!-- Si no hay favoritos -->
+<!-- Si la lista de favoritos está vacía -->
 @if (favoriteFairs.length === 0) {
+<!-- Mostrar mensaje de que no hay favoritos -->
 <p>No hi ha favorits.</p>
 }
 
 <!-- Si hay favoritos -->
 @if (favoriteFairs.length > 0) {
-<ul>
-    <!-- Recorremos la lista de favoritos -->
-    @for (fair of favoriteFairs; track fair.activityId) {
-    <li>
-        <!-- Mostramos la información de la feria favorita -->
-        <strong>{{ fair.activityName }}</strong>
-        <br>
-        <span>{{ fair.municipalityName }}</span>
+<!-- Recorremos la lista de favoritos-->
+@for (fair of favoriteFairs; track fair.activityId) {
 
-        <!-- Botón para eliminar de favoritos -->
+<!-- Mostramos la información de la feria favorita -->
+<div class="favorite-card">
+    <!-- Nombre de la feria-->
+    <h4>{{ fair.activityName }}</h4>
+
+    <!-- Información de la feria -->
+    <p><strong>Municipi:</strong> {{ fair.municipalityName }}</p>
+    <p><strong>Comarca:</strong> {{ fair.regionName }}</p>
+    <p><strong>Data:</strong> {{ fair.date }}</p>
+
+    <!-- Botón para eliminar -->
+    <div class="actions">
         <button (click)="removeFavorite(fair)">
             Eliminar
         </button>
-    </li>
-    }
-</ul>
+
+        <!-- Botón para ver detalles -->
+        <a [routerLink]="['/fair', fair.activityId]">
+            Veure detalls
+        </a>
+    </div>
+</div>
+
+}
 }

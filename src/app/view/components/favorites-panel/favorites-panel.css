@@ -1,62 +1,57 @@
-/* Panel lateral completo */
+/* Panel lateral (bloque gris) */
+/* Panel lateral */
 :host {
     display: block;
     width: 320px;
     min-width: 320px;
-    padding: 20px;
-    background-color: #f8f8f8;
+    min-height: calc(100vh - 100px);
+    padding: 16px;
+    background-color: #f1f1f1;
     border-left: 2px solid #dcdcdc;
     box-sizing: border-box;
+    position: sticky;
+    top: 20px;
     align-self: stretch;
 }
 
 /* Título */
 h3 {
     margin-top: 0;
-    margin-bottom: 20px;
-    color: #c62828;
-    font-size: 28px;
-}
-
-/* Texto vacío */
-p {
-    color: #666;
-    margin: 0;
-}
-
-/* Lista */
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* Cada favorito */
-li {
-    padding-bottom: 16px;
     margin-bottom: 16px;
-    border-bottom: 1px solid #ddd;
+    color: #c62828;
 }
 
-/* Nombre de la feria */
-li strong {
-    display: block;
-    margin-bottom: 8px;
+/* Tarjeta de favorito */
+.favorite-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    background-color: white;
+}
+
+/* Título de la tarjeta */
+.favorite-card h4 {
+    margin: 0 0 8px 0;
+    color: #c62828;
     font-size: 18px;
 }
 
-/* Municipio */
-span {
-    display: inline-block;
-    margin-bottom: 8px;
-    color: #666;
+/* Texto */
+.favorite-card p {
+    margin: 4px 0;
     font-size: 14px;
 }
 
-/* Botón */
-button {
-    margin-left: 0;
-    margin-top: 8px;
+/* Acciones */
+.actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* Botón eliminar */
+.actions button {
     padding: 6px 10px;
     border: none;
     background-color: #eeeeee;
@@ -64,8 +59,23 @@ button {
     border-radius: 6px;
 }
 
-/* Hover */
-button:hover {
+/* Hover eliminar */
+.actions button:hover {
     background-color: #c62828;
     color: white;
+}
+
+/* Botón detalles */
+.actions a {
+    padding: 6px 10px;
+    border-radius: 6px;
+    background-color: #c62828;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Hover detalles */
+.actions a:hover {
+    background-color: #a61e1e;
 }
