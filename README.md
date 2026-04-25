@@ -1,59 +1,159 @@
-# FiresCatalunya
+# Fires de Catalunya 🔥
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.2.
+Aplicación web desarrollada con Angular que permite explorar ferias de Catalunya, filtrarlas por comarca y gestionar una lista de favoritas.
 
-## Development server
+---
 
-To start a local development server, run:
+## 📌 Descripción
 
-```bash
+Esta aplicación permite a los usuarios:
+
+- Visualizar un listado de ferias de Catalunya
+- Filtrar ferias por comarca
+- Consultar el detalle de cada feria
+- Añadir o eliminar ferias de favoritos
+- Guardar favoritos en el navegador (LocalStorage)
+- Ver las favoritas en una página dedicada y en un panel lateral dinámico
+
+---
+
+## 🚀 Tecnologías utilizadas
+
+- Angular 21
+- TypeScript
+- HTML5
+- CSS3
+- LocalStorage
+
+---
+
+## 🧱 Estructura del proyecto
+
+src/app/
+
+├── model/
+│   └── fairs.ts
+
+├── view/
+│   ├── components/
+│   │   ├── header/
+│   │   ├── fair-card/
+│   │   └── favorites-panel/
+│
+│   └── pages/
+│       ├── home/
+│       ├── fairs/
+│       ├── favorites/
+│       └── fair-detail/
+
+├── app.routes.ts
+└── app.ts
+
+---
+
+## 🧩 Funcionalidades principales
+
+### 🔎 Filtrado por comarca
+- Selección de comarca mediante un desplegable
+- Muestra únicamente las ferias de la comarca seleccionada
+
+### ⭐ Gestión de favoritos
+- Añadir o eliminar ferias de favoritos
+- Persistencia mediante LocalStorage
+- Contador de favoritos en la interfaz
+
+### 📄 Vista detalle
+- Acceso a información completa de cada feria
+- Navegación mediante rutas dinámicas (`/fair/:id`)
+
+### 📦 Panel lateral de favoritos
+- Sidebar desplegable
+- Actualización en tiempo real
+- Scroll automático si hay muchos elementos
+
+### 🧱 Componentización
+- `fair-card`: tarjeta reutilizable
+- `favorites-panel`: panel lateral
+- `header`: navegación
+- Separación clara entre páginas y componentes
+
+---
+
+## 🎨 Interfaz
+
+- Diseño limpio y moderno
+- Tarjetas visuales para cada feria
+- Header con navegación
+- Home elegante con acceso directo a las ferias
+- Botón con badge para mostrar el número de favoritos
+
+---
+
+## 💾 Persistencia de datos
+
+Se utiliza `LocalStorage` para:
+- Guardar ferias favoritas
+- Mantener los datos entre recargas de página
+
+---
+
+## ▶️ Cómo ejecutar el proyecto
+
+1. Clonar el repositorio:
+
+git clone https://github.com/tu-usuario/tu-repo.git
+
+2. Acceder al proyecto:
+
+cd fires-catalunya
+
+3. Instalar dependencias:
+
+npm install
+
+4. Ejecutar la aplicación:
+
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+5. Abrir en el navegador:
 
-## Code scaffolding
+http://localhost:4200
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## 🎯 Objetivo académico
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Este proyecto ha sido desarrollado como parte de la asignatura de Desarrollo Web Moderno (DWM), aplicando conceptos como:
 
-```bash
-ng generate --help
-```
+- Componentes en Angular
+- Data Binding
+- Routing
+- Comunicación entre componentes
+- Manipulación del DOM
+- Uso de LocalStorage
+- Organización y estructura de proyecto
 
-## Building
+---
 
-To build the project run:
+## 🏁 Estado del proyecto
 
-```bash
-ng build
-```
+✔ Funcionalidad completa  
+✔ Interfaz cuidada  
+✔ Componentización aplicada  
+✔ Extras implementados  
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## ✨ Posibles mejoras futuras
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+- Buscador de ferias
+- Persistir filtros seleccionados
+- Animaciones en el sidebar
+- Consumo de API externa
+- Diseño responsive mejorado
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
+## 👨‍💻 Autor
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Proyecto realizado por: **Juan Martín**
